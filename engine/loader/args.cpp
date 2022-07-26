@@ -10,6 +10,7 @@
 #include <exception>
 #include <vector>
 #include <algorithm>
+#include <fstream>
 
 namespace skye2d::loader {
     struct ArgsException : public std::exception {
@@ -103,6 +104,9 @@ namespace skye2d::loader {
         arguments.gamename = gamename;
         arguments.switches = switches;
         arguments.flags = flags;
+
+        // std::ifstream f(gamename + "/game.json");
+        // json data = json::parse(f);
 
         return arguments;
     }

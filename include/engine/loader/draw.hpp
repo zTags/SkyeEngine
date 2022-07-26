@@ -8,4 +8,8 @@
 
 #include <SDL2/SDL.h>
 
-void draw(SDL_Renderer* renderer);
+namespace skye2d::loader {
+
+    void draw(SDL_Renderer* renderer);
+
+}

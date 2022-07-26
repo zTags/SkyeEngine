@@ -9,15 +9,18 @@
 
 #include <SDL2/SDL.h>
 
-#include "loader/args.hpp"
-#include "loader/draw.hpp"
-#include "loader/event.hpp"
+#include "engine/loader/args.hpp"
+#include "engine/loader/draw.hpp"
+#include "engine/loader/event.hpp"
 
 using namespace skye2d::loader;
 
 int main(int argc, char** argv) {
     std::vector<std::string> vec_args(argv, argv + argc);
     Args arguments = parseArgs(vec_args);
+
+    std::cout << arguments.flags["width"];
+    std::cout << arguments.flags["height"];
 
     int width = std::stoi(arguments.flags["width"]);
     int height = std::stoi(arguments.flags["height"]);
@@ -48,6 +51,8 @@ int main(int argc, char** argv) {
                 break;
             }
         }
+        
+        draw(renderer);
     }
 
     SDL_DestroyRenderer(renderer);
