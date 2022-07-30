@@ -1,1 +1,1 @@
-add_subdirectory(coreui)
+add_subdirectory(browser)

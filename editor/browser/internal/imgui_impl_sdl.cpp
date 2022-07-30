@@ -61,7 +61,7 @@
 //  2016-10-15: Misc: Added a void* user_data parameter to Clipboard function handlers.
 
 #include "imgui/imgui.h"
-#include "editor/coreui/internal/imgui_impl_sdl.h"
+#include "editor/browser/internal/imgui_impl_sdl.h"
 
 // SDL
 #include <SDL.h>
